@@ -1,0 +1,60 @@
+.ticket{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding:20px;
+    margin-top: 20px;
+    &:hover{
+        background: #F1FCFF;
+    }
+}
+
+.ticket__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket__head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ticket__price{
+    color: #2196F3;
+    display: flex;
+align-items: center;
+font-weight: 600;
+font-size: 24px;
+line-height: 24px;
+margin: 0
+}
+
+.ticket__there, .ticket__back{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+}
+.ticket__there{
+margin-bottom: 10px;
+}
+
+.info__way, .info__in, .info__countOfTransfer{
+display: flex;
+max-width: 141px;
+margin: 0;
+font-size: 12px;
+line-height: 18px;
+font-weight: 600;
+color: #A0B0B9;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.info__arrivingTime, .info__time, .info__transfers{
+    display: flex;
+    margin: 0;
+    font-size: 14px;
+line-height: 21px;
+color: #4A4A4A;
+max-width: 141px;
+}

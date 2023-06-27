@@ -1,0 +1,37 @@
+
+.options{
+  @media (max-width:780px){
+    width: 100%;
+   max-width: 500px;
+        }
+}
+
+.options_buttons{
+  display: flex;
+max-width: 500px;
+height: 50px;
+font-weight: 600;
+font-size: 12px;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+text-align: center;
+margin: 0;
+}
+
+.options_buttons span{
+    font-size: 12px;
+    @media (max-width:505px){
+      font-size: 10px;
+          }
+    @media (max-width:440px){
+      font-size: 7px;
+          }
+}
+
+.options_buttons label {
+    width: 33%;
+  }
+
+.options_buttons label:nth-child(2) {
+    width: 34%;
+  }
