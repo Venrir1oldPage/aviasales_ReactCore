@@ -1,8 +1,7 @@
 import Checkbox from 'react-custom-checkbox'
-//import { useState } from 'react'
 import { connect } from 'react-redux'
 
-import * as actions from '../Redux/actions'
+import * as actions from '../../Redux/actions'
 import iconCheck from '../../images/iconCheck.svg'
 
 import classes from './Checkboxes.module.scss'

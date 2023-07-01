@@ -9,7 +9,10 @@ const filters = [
 const defaultState = {
   filters: filters,
   sort: 'cheapest', // fastest optimal
-  tickets: {},
+  tickets: [],
+  loading:true,
+  error:false,
+  dataStop:false
 }
   
 export default defaultState

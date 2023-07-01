@@ -1,37 +1,46 @@
 import {Provider} from 'react-redux'
-import {configureStore} from '@reduxjs/toolkit'
+import {configureStore, compose} from '@reduxjs/toolkit'
+import thunk from 'redux-thunk'
+import { Offline } from 'react-detect-offline'
+import { Alert} from 'antd'
 
 import logoAviasales from '../../images/logoAviasales.png'
-import Options from '../Options/Options'
+import Sort from '../Sort/Sort'
 import SideFilters from '../SideFilters/SideFilters'
 import TicketList from '../TicketsList/TicketsList'
-import reducer from '../Redux/reducer'
+import reducer from '../../Redux/reducer'
 
 import classes from './App.module.scss'
 
+const composeEnhancers =
+  typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
+    : compose
 
-const showMore = () => {
-  console.log('show more')
-}
+
 const store = configureStore({
   reducer: reducer,
+  middleware:(getDefaultMiddleware) =>
+    getDefaultMiddleware(thunk),
+  devTools:composeEnhancers(),
 })
- 
+
 function App() {
   return (
     <Provider store={store}>
-      <div className={classes['page']}>
-        <header className={classes['page__header']}>
-          <img className={classes['logo']} src={logoAviasales} alt="Логотип Aviasales" />
-        </header>
-        <main className={classes['page__content']}>
-          <SideFilters />
-          <div className={classes['wrapper']}>
-            <Options />
-            <TicketList />
-            <button type="button" className={classes['showMore']} onClick={showMore}>Загрузить еще 5 билетов</button>
-          </div>
-        </main>
+      <div className={classes['page']}><Offline>
+        <Alert className='page__alert' showIcon message='Кажется, у вас нет интернета. Проверьте сетевое соединение' type="error" />
+      </Offline>
+      <header className={classes['page__header']}>
+        <img className={classes['logo']} src={logoAviasales} alt="Логотип Aviasales" />
+      </header>
+      <main className={classes['page__content']}>
+        <SideFilters />
+        <div className={classes['wrapper']}>
+          <Sort />
+          <TicketList/>
+        </div>
+      </main>
       </div>
     </Provider>
   )

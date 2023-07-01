@@ -1,12 +1,13 @@
 
-.options{
+.sort{
+  margin-bottom: 20px;
   @media (max-width:780px){
     width: 100%;
    max-width: 500px;
         }
 }
 
-.options_buttons{
+.sort_buttons{
   display: flex;
 max-width: 500px;
 height: 50px;
@@ -18,7 +19,7 @@ text-align: center;
 margin: 0;
 }
 
-.options_buttons span{
+.sort_buttons span{
     font-size: 12px;
     @media (max-width:505px){
       font-size: 10px;
@@ -28,10 +29,10 @@ margin: 0;
           }
 }
 
-.options_buttons label {
+.sort_buttons label {
     width: 33%;
   }
 
-.options_buttons label:nth-child(2) {
+.sort_buttons label:nth-child(2) {
     width: 34%;
   }
