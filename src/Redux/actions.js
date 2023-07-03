@@ -10,13 +10,19 @@ export const initErr = () => ({ type: 'GOT_ERROR'})
 export const getTickets = () => async (dispatch) => {
   try {
     if (!Api.searchId) await Api.getId()
+
+      
     let data= await Api.getTickets()
     if (data == 500) {data= await Api.getTickets()}
-    let { tickets, dataLoadStop }=data
-    if (tickets.length && !dataLoadStop)
-      dispatch(initData(tickets, dataLoadStop))
+    if (data == 500) {data= await Api.getTickets()} //топорное решение проблемы появления ошибки при двух подряд ошибках сервера. позже испралю наверно, буду рада подсказке :)
+
+
+    let { tickets, dataStop }=data
+    if (tickets && tickets.length && !dataStop)
+      dispatch(initData(tickets, dataStop))
   }
   catch (e) {
+    console.log(e)
     dispatch(initErr())
   }}
 

@@ -12,7 +12,8 @@ const defaultState = {
   tickets: [],
   loading:true,
   error:false,
-  dataStop:false
+  dataStop:false,
+  cutNumber:5
 }
   
 export default defaultState
