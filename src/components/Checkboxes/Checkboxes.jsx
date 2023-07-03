@@ -29,7 +29,7 @@ const Checkboxes = ({filters, checkAll, clearAll, changeFilter}) => {
       }
     }
     return (
-      <li className={classes['side-filters__item']} key={key}>
+      <li className={classes['side-filters__item']} key={key} tabIndex={1+key/10}>
         <label className={classes['side-filters__label']} >
           <Checkbox className={classes['side-filters__checkbox']} size={18} 
             icon={<img src={iconCheck} alt="check" />} style={style}  borderColor={borderColor} checked={checked}

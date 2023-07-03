@@ -1,13 +1,15 @@
 .side-filters__item{
     padding: 10px 20px 10px 20px;
-    &:hover{
+    &:hover, &:focus{
         background-color: #F1FCFF;
+       outline-color:#2196F3 ;
     }
     }
     
-    .side-filters__label{
-        font-size: 13px;
-        line-height: 20px;
-        display: flex;
+.side-filters__label{
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
     align-items: center;
-    }
+    cursor: pointer;
+}

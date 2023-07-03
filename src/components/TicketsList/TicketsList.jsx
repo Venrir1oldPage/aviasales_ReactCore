@@ -61,7 +61,7 @@ const TicketList = ({tickets, loading, error, filters, sort, cutNumber, getTicke
   if(filteredTickets.length) {
     ticketArr = filteredTickets.slice(0, cutNumber).map((i)=>{
       let key= uuidv4()
-      return(<Ticket data={i} key={key}/>)
+      return(<Ticket data={i} key={key} />)
     })
   }
 

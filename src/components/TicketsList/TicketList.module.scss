@@ -21,7 +21,8 @@ padding: 0;
    text-align: center;
    font-size: 12px;
    font-weight: 600;
-   &:hover{
+   &:hover, &:focus {
 	background-color: #42A5F5;
+   outline: 5px solid #acd9fe;
    }
 }
