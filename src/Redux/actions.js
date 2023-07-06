@@ -22,7 +22,6 @@ export const getTickets = () => async (dispatch) => {
       dispatch(initData(tickets, dataStop))
   }
   catch (e) {
-    console.log(e)
     dispatch(initErr())
   }}
 

@@ -1,10 +1,9 @@
 import {Provider} from 'react-redux'
 import {configureStore, compose} from '@reduxjs/toolkit'
-import thunk from 'redux-thunk'
 import { Offline } from 'react-detect-offline'
 import { Alert} from 'antd'
 
-import logoAviasales from '../../images/logoAviasales.png'
+import logoAviasales from '../../assets/images/logoAviasales.png'
 import Sort from '../Sort/Sort'
 import SideFilters from '../SideFilters/SideFilters'
 import TicketList from '../TicketsList/TicketsList'
@@ -20,8 +19,6 @@ const composeEnhancers =
 
 const store = configureStore({
   reducer: reducer,
-  middleware:(getDefaultMiddleware) =>
-    getDefaultMiddleware(thunk),
   devTools:composeEnhancers(),
 })
 
@@ -29,12 +26,12 @@ function App() {
   return (
     <Provider store={store}>
       <div className={classes['page']}><Offline>
-        <Alert className='page__alert' showIcon message='Кажется, у вас нет интернета. Проверьте сетевое соединение' type="error" />
+        <Alert className='lert' showIcon message='Кажется, у вас нет интернета. Проверьте сетевое соединение' type="error" />
       </Offline>
-      <header className={classes['page__header']}>
+      <header className={classes['header']}>
         <img className={classes['logo']} src={logoAviasales} alt="Логотип Aviasales" />
       </header>
-      <main className={classes['page__content']}>
+      <main className={classes['content']}>
         <SideFilters />
         <div className={classes['wrapper']}>
           <Sort />

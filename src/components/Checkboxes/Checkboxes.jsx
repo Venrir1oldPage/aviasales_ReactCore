@@ -2,7 +2,7 @@ import Checkbox from 'react-custom-checkbox'
 import { connect } from 'react-redux'
 
 import * as actions from '../../Redux/actions'
-import iconCheck from '../../images/iconCheck.svg'
+import iconCheck from '../../assets/images/iconCheck.svg'
 
 import classes from './Checkboxes.module.scss'
 
@@ -29,11 +29,10 @@ const Checkboxes = ({filters, checkAll, clearAll, changeFilter}) => {
       }
     }
     return (
-      <li className={classes['side-filters__item']} key={key} tabIndex={1+key/10}>
-        <label className={classes['side-filters__label']} >
-          <Checkbox className={classes['side-filters__checkbox']} size={18} 
-            icon={<img src={iconCheck} alt="check" />} style={style}  borderColor={borderColor} checked={checked}
-            onChange={check} />{value}</label></li>
+      <li className={classes['item']} key={key} tabIndex={1+key/10}>
+        <label className={classes['label']} >
+          <Checkbox size={18} icon={<img src={iconCheck} alt="check" />} style={style}  
+            borderColor={borderColor} checked={checked} onChange={check} />{value}</label></li>
     )
   }
   )

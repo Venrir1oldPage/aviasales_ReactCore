@@ -1,4 +1,3 @@
-
 .sort{
   margin-bottom: 20px;
   @media (max-width:780px){
@@ -7,7 +6,7 @@
         }
 }
 
-.sort_buttons{
+.buttons{
   display: flex;
 max-width: 500px;
 height: 50px;
@@ -19,7 +18,7 @@ text-align: center;
 margin: 0;
 }
 
-.sort_buttons span{
+.buttons span{
     font-size: 12px;
     @media (max-width:505px){
       font-size: 10px;
@@ -29,10 +28,10 @@ margin: 0;
           }
 }
 
-.sort_buttons label {
+.buttons label {
     width: 33%;
   }
 
-.sort_buttons label:nth-child(2) {
+.buttons label:nth-child(2) {
     width: 34%;
   }

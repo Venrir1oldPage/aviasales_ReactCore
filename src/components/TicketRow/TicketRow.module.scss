@@ -1,26 +1,28 @@
-.info__way, .info__in, .info__countOfTransfer{
+@import '../../assets/variables.module.scss';
+
+.way, .in, .countOfTransfer{
     display: flex;
     max-width: 141px;
     margin: 0;
     font-size: 12px;
     line-height: 18px;
     font-weight: 600;
-    color: #A0B0B9;
+    color: $customLightGray;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     }
     
-    .info__arrivingTime, .info__time, .info__transfers{
+    .arrivingTime, .time, .transfers{
         display: flex;
         margin: 0;
         font-size: 14px;
     line-height: 21px;
-    color: #4A4A4A;
+    color: $customGray;
     max-width: 141px;
     }
 
-    .info_row{
+    .row{
     display: grid;
     grid-template-columns: 33% 33% 34%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }

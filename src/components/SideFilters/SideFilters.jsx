@@ -6,8 +6,8 @@ const SideFilters=() => {
 
   return(
     <section className={classes['side-filters']}>
-      <h2 className={classes['side-filters__description']}>Количество пересадок</h2>
-      <ul className={classes['side-filters__list']}>
+      <h2 className={classes['description']}>Количество пересадок</h2>
+      <ul className={classes['list']}>
         <Checkboxes />        
       </ul>
     </section>

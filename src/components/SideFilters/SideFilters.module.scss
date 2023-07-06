@@ -1,3 +1,5 @@
+@import '../../assets/variables.module.scss';
+
 .side-filters{
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
@@ -15,23 +17,24 @@
             }
 }
     
-.side-filters__description{
+.description{
     font-weight: 600;
     font-size: 12px;
     line-height: 12px;
     padding: 0;
     margin: 0;
-    color: #4A4A4A;
+    color: $customGray;
     margin-bottom: 10px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     padding-left: 20px;
 }
     
-.side-filters__list{
+.list{
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
     }
 
         

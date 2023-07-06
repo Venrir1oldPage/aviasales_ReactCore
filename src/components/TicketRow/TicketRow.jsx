@@ -19,13 +19,13 @@ export default function TicketRow ({data}) {
   }
 
   return (
-    <div className={classes['info_row']}>
-      <p className={classes['info__way']}>{origin}-{destination}</p>
-      <p className={classes['info__in']}>В пути</p>
-      <p className={classes['info__countOfTransfer']}>{countStops}</p>
-      <p className={classes['info__arrivingTime']}>{hoursDeparture}:{minutesDeparture} - {hourArrivals}:{mArrivals}</p>
-      <p className={classes['info__time']}>{hours}ч {minutes}м</p>
-      <p className={classes['info__transfers']}>{stop}</p>
+    <div className={classes['row']}>
+      <p className={classes['way']}>{origin}-{destination}</p>
+      <p className={classes['in']}>В пути</p>
+      <p className={classes['countOfTransfer']}>{countStops}</p>
+      <p className={classes['arrivingTime']}>{hoursDeparture}:{minutesDeparture} - {hourArrivals}:{mArrivals}</p>
+      <p className={classes['time']}>{hours}ч {minutes}м</p>
+      <p className={classes['transfers']}>{stop}</p>
     </div>
   )
 }

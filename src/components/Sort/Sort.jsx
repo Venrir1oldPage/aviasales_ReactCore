@@ -27,7 +27,7 @@ const Sort =({option, changeSort}) => {
     <ConfigProvider theme={setting}>
       <section className={classes['sort']}>
         <Radio.Group options={options} onChange={onChange} 
-          className={classes['sort_buttons']} tabIndex={6}
+          className={classes['buttons']} tabIndex={6}
           value={option} optionType="button" buttonStyle="solid"/>
       </section>
     </ConfigProvider>

@@ -1,12 +1,14 @@
-.side-filters__item{
+@import '../../assets/variables.module.scss';
+
+.item{
     padding: 10px 20px 10px 20px;
     &:hover, &:focus{
-        background-color: #F1FCFF;
-       outline-color:#2196F3 ;
+        background-color: $customLightBlue;
+       outline-color: $customBlue;
     }
     }
     
-.side-filters__label{
+.label{
     font-size: 13px;
     line-height: 20px;
     display: flex;

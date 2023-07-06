@@ -1,3 +1,5 @@
+@import '../../assets/variables.module.scss';
+
 .tickets{
 list-style: none;
 margin: 0;
@@ -15,7 +17,7 @@ padding: 0;
    width: 502px;
    height: 50px;
    color: white;
-   background: #2196F3;
+   background: $customBlue;
    border-radius: 5px;
    line-height: 50px;
    text-align: center;
@@ -23,6 +25,6 @@ padding: 0;
    font-weight: 600;
    &:hover, &:focus {
 	background-color: #42A5F5;
-   outline: 5px solid #acd9fe;
+   outline: 5px solid #aceffe;
    }
 }

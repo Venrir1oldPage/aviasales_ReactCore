@@ -8,11 +8,11 @@ const Ticket = ({data}) => {
 
   return (
     <li className={classes['ticket']}>
-      <div className={classes['ticket__head']}>
-        <p className={classes['ticket__price']}>{price} P</p>
-        <img className={classes['ticket__company']} src={`https://pics.avs.io/99/36/${carrier}.png`} alt={`Авиакомпания ${carrier}`} width={110} height={36}/>
+      <div className={classes['head']}>
+        <p className={classes['price']}>{price} P</p>
+        <img className={classes['company']} src={`https://pics.avs.io/99/36/${carrier}.png`} alt={`Авиакомпания ${carrier}`} width={110} height={36}/>
       </div>
-      <div className={classes['ticket__info']}>
+      <div className={classes['info']}>
         <TicketRow  data={segments[0]}/>
         <TicketRow  data={segments[1]}/>
       </div>
